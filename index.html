@@ -1,13 +1,220 @@
-<div class="section" style="text-align: center;">
-    <h2>Get In Touch</h2>
-    <p>Available for Data Analysis, ICT Consulting, and Music Production.</p>
-    
-    <a href="https://wa.me/254716912286?text=Hi%20Wycliffe,%20I%20saw%20your%20portfolio" 
-       style="background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: 0.3s;">
-       <span style="font-size: 1.2rem;">💬</span> Message me on WhatsApp
-    </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davine Digital | Professional Online Services</title>
+<meta name="description" content="Davine Digital helps businesses grow with websites, consulting, data analysis, ICT consulting, music production, and digital solutions.">
 
-    <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
-        Email: <a href="mailto:wycliffedavine@gmail.com" style="color: #00264a; text-decoration: underline;">wycliffedavine@gmail.com</a>
-    </p>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* GLOBAL */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f8fafc;color:#333;scroll-behavior:smooth;}
+a{text-decoration:none;}
+
+/* NAVBAR */
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;background:white;box-shadow:0 4px 15px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;}
+.logo{font-size:22px;font-weight:700;color:#2563eb;}
+nav ul{display:flex;list-style:none;}
+nav ul li{margin-left:25px;}
+nav a{color:#333;font-weight:500;transition:.3s;}
+nav a:hover{color:#2563eb;}
+
+/* HERO */
+.hero{height:90vh;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");background-size:cover;background-position:center;color:white;text-align:center;padding:20px;}
+.hero h1{font-size:48px;margin-bottom:20px;}
+.hero p{font-size:18px;margin-bottom:25px;}
+.btn{background:#2563eb;color:white;padding:14px 25px;border:none;border-radius:6px;cursor:pointer;font-size:16px;transition:.3s;}
+.btn:hover{background:#1e3a8a;}
+
+/* SECTIONS */
+section{padding:80px 10%;}
+.section-title{text-align:center;font-size:32px;margin-bottom:50px;}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.card{background:white;padding:30px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.05);text-align:center;transition:.3s;opacity:0;transform:translateY(20px);}
+.card:hover{transform:translateY(-5px);}
+.card img{width:70px;margin-bottom:15px;}
+
+/* ABOUT */
+.about{display:flex;flex-wrap:wrap;align-items:center;gap:40px;}
+.about img{width:450px;max-width:100%;border-radius:10px;opacity:0;transform:translateX(-20px);}
+
+/* PROJECTS & SKILLS */
+.projects, .skills{margin-top:50px;opacity:0;transform:translateY(20px);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px;margin-top:20px;}
+.skill-item{background:#2563eb;color:white;padding:12px;border-radius:10px;text-align:center;font-weight:600;}
+
+/* TESTIMONIALS */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.testimonial{background:white;padding:25px;border-radius:10px;box-shadow:0 6px 15px rgba(0,0,0,0.05);opacity:0;transform:translateY(20px);}
+
+/* CONTACT */
+.contact form{max-width:500px;margin:auto;}
+input,textarea{width:100%;padding:12px;margin:10px 0;border-radius:6px;border:1px solid #ccc;}
+button{width:100%;padding:12px;border:none;background:#2563eb;color:white;border-radius:6px;cursor:pointer;}
+
+/* GOOGLE MAP */
+iframe{border:0;border-radius:10px;}
+
+/* WHATSAPP FIXED BUTTON */
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 18px;border-radius:50px;font-size:18px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.2);}
+
+/* GET IN TOUCH SECTION */
+.get-in-touch{margin-top:60px;opacity:0;transform:translateY(20px);}
+
+/* FOOTER */
+footer{background:#0f172a;color:white;text-align:center;padding:30px;margin-top:40px;}
+
+/* ANIMATION */
+.animate{opacity:1 !important;transform:translateY(0) !important;transition:all 0.8s ease-out;}
+.animate-left{opacity:1 !important;transform:translateX(0) !important;transition:all 0.8s ease-out;}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h1{font-size:34px;}
+nav ul{display:none;}
+.about{flex-direction:column;}
+.skills-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="logo">Davine Digital</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#get-in-touch">Get In Touch</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Build Your Business Online</h1>
+<p>Professional digital solutions to grow your brand and income.</p>
+<button class="btn">Start Today</button>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+<div class="services">
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"><h3>Website Creation</h3><p>Professional websites for businesses and entrepreneurs.</p></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/906/906175.png"><h3>Business Consulting</h3><p>Helping businesses grow faster and smarter.</p></div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png"><h3>Online Services</h3><p>Digital support for modern online businesses.</p></div>
 </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Us</h2>
+<div class="about">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<div><p>Davine Digital Services provides modern digital solutions for businesses that want to grow online. We specialize in websites, online business support, ICT consulting, data analysis, and consulting services designed to help entrepreneurs succeed.</p></div>
+</div>
+</section>
+
+<!-- PROJECTS & SKILLS -->
+<section id="projects" class="projects">
+<h2 class="section-title">Projects & Creative Work</h2>
+<div style="margin-bottom: 20px;">
+<p><strong>🎵 Professional Musician & Performing Artist</strong><br>
+Active recording artist and performer focusing on the Afrobeat genre. I manage full-cycle music projects from songwriting to live stage performance, bringing high-energy digital sounds to local and global audiences.</p>
+</div>
+<div style="margin-bottom: 20px;">
+<p><strong>🎧 Afrobeat Production & Sound Design</strong><br>
+Expertise in mobile-based Digital Audio Workstations (DAW), specializing in drum sequencing, rhythm arrangement, and digital mixing for modern Afro-fusion tracks.</p>
+</div>
+<div style="margin-bottom: 20px;">
+<p><strong>📊 Data Analysis & ICT Systems</strong><br>
+Developed automated reporting dashboards and managed ICT infrastructure audits, ensuring peak performance for enterprise hardware like the HP EliteBook series.</p>
+</div>
+
+<h2 class="section-title">Technical & Creative Skills</h2>
+<div class="skills-grid">
+<div class="skill-item">Data Analysis</div>
+<div class="skill-item">FL Studio Mobile</div>
+<div class="skill-item">Music Arrangement</div>
+<div class="skill-item">ICT Infrastructure</div>
+<div class="skill-item">SQL & Databases</div>
+<div class="skill-item">Live Performance</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+<h2 class="section-title">What Clients Say</h2>
+<div class="testimonials">
+<div class="testimonial"><p>"Amazing service! Our website helped us reach more customers."</p><strong>- Business Owner</strong></div>
+<div class="testimonial"><p>"Professional and reliable digital services."</p><strong>- Entrepreneur</strong></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2 class="section-title">Contact Us</h2>
+<form onsubmit="event.preventDefault(); alert('Message sent successfully!')">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<!-- GOOGLE MAP -->
+<section>
+<h2 class="section-title">Our Location</h2>
+<iframe src="https://maps.google.com/maps?q=Mombasa&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="350"></iframe>
+</section>
+
+<!-- GET IN TOUCH SECTION -->
+<section id="get-in-touch" class="get-in-touch">
+<div style="text-align: center;">
+<h2>Get In Touch</h2>
+<p>Available for Data Analysis, ICT Consulting, and Music Production.</p>
+<a href="https://wa.me/254716912286?text=Hi%20Wycliffe,%20I%20saw%20your%20portfolio" 
+style="background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: 0.3s;">
+<span style="font-size: 1.2rem;">💬</span> Message me on WhatsApp
+</a>
+<p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+Email: <a href="mailto:wycliffedavine@gmail.com" style="color: #00264a; text-decoration: underline;">wycliffedavine@gmail.com</a>
+</p>
+</div>
+</section>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a class="whatsapp" href="https://wa.me/254716912286?text=Hi%20Wycliffe,%20I%20saw%20your%20portfolio">💬 WhatsApp</a>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Davine Digital Services</p>
+</footer>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+function animateOnScroll() {
+  const elements = document.querySelectorAll('.card, .testimonial, .about img, .get-in-touch, .projects');
+  const triggerBottom = window.innerHeight / 1.1;
+  elements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if(boxTop < triggerBottom) {
+      el.classList.add('animate');
+      if(el.classList.contains('about img')) el.classList.add('animate-left');
+    }
+  });
+}
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+</script>
+
+</body>
+</html>
